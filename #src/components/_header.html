@@ -13,11 +13,13 @@
   <div class="wrapper" id="app">
 
     <header class="header">
-      <div class="header__wrapper" v-on:mouseleave="closeMenu">
+      <div class="header__wrapper" v-on:mouseleave="closeMainMenu">
 
         <div class="container">
           <div class="header__top">
-            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection">Направления</div>
+            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection(menuDirection.nameMenu)">
+              Направления
+            </div>
 
             <div class="header__search main-search">
               <button class="main-search__button" type="submit">
@@ -55,7 +57,8 @@
 
                 <template v-for="(item, index) in menuMain.arrItemMenu" :key="index">
                   <li class="main-nav__item">
-                    <a :href="item.linkItem" v-on:mouseenter="openMenu(menuMain.nameMenu), openMainMenuLevelTwo(index)">
+                    <a :href="item.linkItem"
+                      v-on:mouseenter="openMainMenu(menuMain.nameMenu), openMainMenuLevelTwo(index)">
                       {{ item.nameItem }}
                     </a>
                   </li>
@@ -109,42 +112,18 @@
           </div>
         </template>
 
-        <template>
+        <template v-if="showMainMenu === menuDirection.nameMenu">
           <div class="header__menu-direction menu-direction">
             <div class="container">
               <div class="menu-direction__list">
-                <div class="menu-direction__item">
-                  <a href="#" class="menu-direction__name">Биржа
-                    для бизнеса</a>
 
-                  <div class="menu-direction__text">Управление денежными активами компаний</div>
-                </div>
+                <template v-for="(item, index) in menuDirection.arrItemMenu" :key="index">
+                  <div class="menu-direction__item">
+                    <a :href="item.linkItem" class="menu-direction__name">{{ item.nameItem }}</a>
 
-                <div class="menu-direction__item">
-                  <a href="#" class="menu-direction__name">Национальная товарная биржа</a>
-
-                  <div class="menu-direction__text">Организация биржевого товарного рынка в России</div>
-                </div>
-
-                <div class="menu-direction__item">
-                  <a href="#" class="menu-direction__name">Национальный клиринговый центр</a>
-
-                  <div class="menu-direction__text">Услуги центрального контрагента и клиринговой организации</div>
-                </div>
-
-                <div class="menu-direction__item">
-                  <a href="#" class="menu-direction__name">Национальный расчетный депозитарий</a>
-
-                  <div class="menu-direction__text">Услуги центрального депозитария, расчетного банка и торгового
-                    репозитария</div>
-                </div>
-
-                <div class="menu-direction__item">
-                  <a href="#" class="menu-direction__name">Финуслуги</a>
-
-                  <div class="menu-direction__text">Маркетплейс, созданный чтобы сделать банковские и страховые продукты
-                    доступными для населения</div>
-                </div>
+                    <div class="menu-direction__text">{{ item.textItem }}</div>
+                  </div>
+                </template>
 
               </div>
             </div>

@@ -4,7 +4,7 @@ const header = Vue.createApp({
 			showMainMenu: null,
 
 			menuMain: {
-				nameMenu: "mainMenu",
+				nameMenu: "menuMain",
 				showMainMenuLevelTwoIndex: 0,
 				showMainMenuLevelThreeIndex: 0,
 
@@ -264,16 +264,53 @@ const header = Vue.createApp({
 					},
 				],
 			},
+
+			menuDirection: {
+				nameMenu: "menuDirection",
+				arrItemMenu: [
+					{
+						nameItem: "Биржа для бизнеса",
+						textItem: "Управление денежными активами компаний",
+						linkItem: "/link",
+					},
+
+					{
+						nameItem: "Национальная товарная биржа",
+						textItem: "Организация биржевого товарного рынка в России",
+						linkItem: "/link",
+					},
+
+					{
+						nameItem: "Национальный клиринговый центр",
+						textItem: "Услуги центрального контрагента и клиринговой организации",
+						linkItem: "/link",
+					},
+
+					{
+						nameItem: "Национальный расчетный депозитарий",
+						textItem: "Услуги центрального депозитария, расчетного банка и торгового репозитария",
+						linkItem: "/link",
+					},
+
+					{
+						nameItem: "Финуслуги",
+						textItem: "Маркетплейс, созданный чтобы сделать банковские и страховые продукты доступными для населения",
+						linkItem: "/link",
+					},
+				],
+			},
 		};
 	},
 
 	methods: {
-		openMenu(name) {
+		openMainMenu(name) {
 			this.showMainMenu = name;
 		},
 
-		closeMenu() {
-			this.showMainMenu = "";
+		closeMainMenu() {
+			if (this.showMainMenu === this.menuMain.nameMenu) {
+				this.showMainMenu = "";
+			}
 		},
 
 		openMainMenuLevelTwo(index) {
@@ -285,8 +322,12 @@ const header = Vue.createApp({
 			this.menuMain.showMainMenuLevelThreeIndex = index;
 		},
 
-		openMainMenu(e) {
-			this.showMenu = e.target.getAttribute("id");
+		openMenuDirection(name) {
+			if (this.showMainMenu === name) {
+				this.showMainMenu = "";
+			} else {
+				this.showMainMenu = name;
+			}
 		},
 	},
 });
