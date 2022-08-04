@@ -1,0 +1,246 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f4f5f8;
+	z-index: 10;
+	&__top {
+		padding: 14px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #e3e4e8;
+	}
+
+	&__direction {
+		cursor: pointer;
+		position: relative;
+		padding-left: 32px;
+		color: var(--header-text-color-dark);
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50% - 3px);
+			left: 0;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-direction.svg") no-repeat center / contain;
+		}
+	}
+
+	&__search {
+		flex-grow: 1;
+		margin: 0 30px 0 256px;
+	}
+
+	&__group {
+		display: flex;
+	}
+
+	&__time {
+		margin-right: 32px;
+		opacity: 0.5;
+		color: var(--header-text-color-dark);
+	}
+
+	&__auth {
+		position: relative;
+		margin-right: 32px;
+		padding-left: 32px;
+		color: var(--header-text-color-dark);
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50% - 3px);
+			left: 0;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-auth.svg") no-repeat center / contain;
+		}
+	}
+
+	&__language {
+		& a {
+			color: var(--header-text-color-dark);
+			&.active {
+				color: var(--text-color-red);
+			}
+		}
+	}
+
+	&__bottom {
+		padding: 24px 0 24px 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+	}
+
+	&__main-nav {
+		flex-grow: 1;
+		margin: 0 30px 0 260px;
+	}
+
+	&__nav-drop {
+		cursor: pointer;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50%);
+			left: 0;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-burger.svg") no-repeat center / contain;
+		}
+	}
+}
+
+.main-nav {
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+		& a {
+			padding-bottom: 8px;
+			border-bottom: 1px solid transparent;
+			color: var(--header-text-color-dark);
+			transition: all 0.3s ease;
+			&.hover {
+				border-color: var(--text-color-red);
+				color: var(--text-color-red);
+			}
+		}
+	}
+}
+
+.main-search {
+	display: flex;
+	align-items: center;
+	&__button {
+		margin-right: 8px;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		background: none;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-search.svg") no-repeat center / contain;
+		}
+	}
+
+	&__input {
+		background: none;
+		width: 100%;
+		font-size: 16px;
+		line-height: 150%;
+		font-feature-settings: "ss04" on;
+		color: var(--header-text-color-dark);
+		&::placeholder {
+			color: var(--header-text-color-dark);
+		}
+	}
+}
+
+.main-menu-drop {
+	padding: 56px 0 64px 0;
+	&__row {
+		display: grid;
+		grid-template-columns: 370px 1fr;
+		gap: 20px;
+	}
+
+	&__column {
+	}
+
+	&__left-list {
+		& .main-menu-drop {
+			&__item {
+				&:not(:last-child) {
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: block;
+		font-size: 24px;
+		line-height: 120%;
+		font-feature-settings: "ss04" on;
+	}
+
+	&__right-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 32px;
+	}
+
+	&__text {
+		margin-top: 12px;
+		font-size: 14px;
+		line-height: 140%;
+		font-feature-settings: "ss04" on;
+		color: #87898d;
+	}
+}
+
+.menu-direction {
+	padding: 50px 0 64px 0;
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 40px;
+	}
+
+	&__item {
+		position: relative;
+		padding-bottom: 77px;
+		border-bottom: 1px solid #18191b;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 21px;
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-arrow-up-right.svg") no-repeat center / contain;
+		}
+	}
+
+	&__name {
+		display: block;
+		font-size: 24px;
+		line-height: 120%;
+		font-feature-settings: "ss04" on;
+	}
+
+	&__text {
+		margin-top: 12px;
+		font-size: 14px;
+		line-height: 140%;
+		font-feature-settings: "ss04" on;
+		color: #87898d;
+	}
+}

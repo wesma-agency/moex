@@ -1,0 +1,754 @@
+@@include("../components/_header.html")
+
+<main class="main">
+  <section class="main-screen">
+    <div class="container">
+      <div class="main-screen__wrap">
+        <h1 class="main-screen__title title-h1">
+          Биржевая информация
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-rates">
+    <div class="container">
+      <div class="block-rates__wrap">
+
+        <div class="block-rates__group">
+          <div class="block-rates__left">
+            <h2 class="block-rates__title title-h2">Фондовый рынок</h2>
+          </div>
+
+          <div class="block-rates__right">
+            <div class="block-rates__sort">
+              <div class="block-rates__sort-item sort">Популярные</div>
+              <div class="block-rates__sort-item sort">Взлеты</div>
+              <div class="block-rates__sort-item sort">Падения</div>
+              <div class="block-rates__sort-item sort">Новые</div>
+            </div>
+
+            <div class="block-rates__filter">
+              <div class="block-rates__filter-item filter">
+                <div class="filter__current">Весь мир</div>
+                <div class="filter__list">
+                  <div class="filter__item">Весь мир</div>
+                  <div class="filter__item">Страна 1</div>
+                  <div class="filter__item">Страна 2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block-rates__table table-rates">
+          <div class="table-rates__row">
+            <div class="table-rates__column">
+              <div class="table-rates__caption">
+                <div class="table-rates__title">Разделы</div>
+
+                <div class="table-rates__sect">
+
+                </div>
+              </div>
+
+              <div class="table-rates__category-list">
+
+                <div class="table-rates__category-item active">
+                  <span class="table-rates__category-item-name">Акции</span>
+                  <span class="table-rates__category-item-value">243</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">Global</span>
+                  <span class="table-rates__category-item-value">513</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">ОФЗ</span>
+                  <span class="table-rates__category-item-value">257</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">Еврооблигации</span>
+                  <span class="table-rates__category-item-value">258</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="table-rates__column">
+              <div class="table-rates__caption">
+                <div class="table-rates__title">Наименование</div>
+                <div class="table-rates__title">Новости</div>
+                <div class="table-rates__title">Стоимость</div>
+                <div class="table-rates__title">Изменения</div>
+                <div class="table-rates__title">График 1д.</div>
+              </div>
+
+              <div class="table-rates__list">
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-1.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Мосбиржа</div>
+                        <div class="field-rates__sign">MOEX</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">16 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">3 745,02 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,49 %</div>
+                        <div class="field-rates__price --green">+46,40 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-2.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Сбербанк</div>
+                        <div class="field-rates__sign">SBER</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">4 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">292,92₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --red">-13,74 %</div>
+                        <div class="field-rates__price --red">-0,85 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-3.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Норникель</div>
+                        <div class="field-rates__sign">GMKN</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">1 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">22 642 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">0 %</div>
+                        <div class="field-rates__price --green">0 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-4.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Газпром</div>
+                        <div class="field-rates__sign">GAZPR</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">36 398,21 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-5.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">ЛУКОЙЛ</div>
+                        <div class="field-rates__sign">LKOH</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">3 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">24 494,17 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">-0,87 %</div>
+                        <div class="field-rates__price --green">-214,33 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-6.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Аэрофлот</div>
+                        <div class="field-rates__sign">AFLT</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">12 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">58,86 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-7.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Яндекс</div>
+                        <div class="field-rates__sign">YNDX</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">8 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">4 431,2 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-8.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">TCS Group</div>
+                        <div class="field-rates__sign">TCSG</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 974 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,49 %</div>
+                        <div class="field-rates__price --green">+46,40 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block-rates">
+    <div class="container">
+      <div class="block-rates__wrap">
+
+        <div class="block-rates__group">
+          <div class="block-rates__left">
+            <h2 class="block-rates__title title-h2">Валюта и драгметаллы</h2>
+          </div>
+
+          <div class="block-rates__right">
+            <div class="block-rates__sort">
+              <div class="block-rates__sort-item sort">Популярные</div>
+              <div class="block-rates__sort-item sort">Взлеты</div>
+              <div class="block-rates__sort-item sort">Падения</div>
+              <div class="block-rates__sort-item sort">Новые</div>
+            </div>
+
+            <div class="block-rates__filter">
+              <div class="block-rates__filter-item filter">
+                <div class="filter__current">Весь мир</div>
+                <div class="filter__list">
+                  <div class="filter__item">Весь мир</div>
+                  <div class="filter__item">Страна 1</div>
+                  <div class="filter__item">Страна 2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block-rates__table table-rates">
+          <div class="table-rates__row">
+            <div class="table-rates__column">
+              <div class="table-rates__caption">
+                <div class="table-rates__title">Разделы</div>
+
+                <div class="table-rates__sect">
+
+                </div>
+              </div>
+
+              <div class="table-rates__category-list">
+
+                <div class="table-rates__category-item active">
+                  <span class="table-rates__category-item-name">Акции</span>
+                  <span class="table-rates__category-item-value">243</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">Global</span>
+                  <span class="table-rates__category-item-value">513</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">ОФЗ</span>
+                  <span class="table-rates__category-item-value">257</span>
+                </div>
+
+                <div class="table-rates__category-item">
+                  <span class="table-rates__category-item-name">Еврооблигации</span>
+                  <span class="table-rates__category-item-value">258</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="table-rates__column">
+              <div class="table-rates__caption">
+                <div class="table-rates__title">Наименование</div>
+                <div class="table-rates__title">Новости</div>
+                <div class="table-rates__title">Стоимость</div>
+                <div class="table-rates__title">Изменения</div>
+                <div class="table-rates__title">График 1д.</div>
+              </div>
+
+              <div class="table-rates__list">
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-1.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Мосбиржа</div>
+                        <div class="field-rates__sign">MOEX</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">16 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">3 745,02 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,49 %</div>
+                        <div class="field-rates__price --green">+46,40 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-2.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Сбербанк</div>
+                        <div class="field-rates__sign">SBER</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">4 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">292,92₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --red">-13,74 %</div>
+                        <div class="field-rates__price --red">-0,85 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-3.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Норникель</div>
+                        <div class="field-rates__sign">GMKN</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">1 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">22 642 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">0 %</div>
+                        <div class="field-rates__price --green">0 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-4.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Газпром</div>
+                        <div class="field-rates__sign">GAZPR</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">36 398,21 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-5.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">ЛУКОЙЛ</div>
+                        <div class="field-rates__sign">LKOH</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">3 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">24 494,17 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">-0,87 %</div>
+                        <div class="field-rates__price --green">-214,33 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-6.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Аэрофлот</div>
+                        <div class="field-rates__sign">AFLT</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">12 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">58,86 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-7.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">Яндекс</div>
+                        <div class="field-rates__sign">YNDX</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">8 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">4 431,2 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,26 %</div>
+                        <div class="field-rates__price --green">+95,83 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-rates__item field-rates">
+                  <div class="field-rates__row">
+                    <div class="field-rates__column">
+                      <div class="field-rates__logo">
+                        <img src="./img/icon-logo-8.png" alt="">
+                      </div>
+                      <div class="field-rates__group">
+                        <div class="field-rates__name">TCS Group</div>
+                        <div class="field-rates__sign">TCSG</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 новостей</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__name">5 974 ₽</div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__group">
+                        <div class="field-rates__price --green">+0,49 %</div>
+                        <div class="field-rates__price --green">+46,40 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="field-rates__column">
+                      <div class="field-rates__graph"></div>
+
+                      <div class="field-rates__add"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("../components/_footer.html")

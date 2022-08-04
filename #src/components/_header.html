@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="wrapper" id="app">
+
+    <header class="header">
+      <div class="header__wrapper" v-on:mouseleave="closeMenu">
+
+        <div class="container">
+          <div class="header__top">
+            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection">Направления</div>
+
+            <div class="header__search main-search">
+              <button class="main-search__button" type="submit">
+
+              </button>
+
+              <input class="main-search__input" type="text" placeholder="Поиск">
+            </div>
+
+            <div class="header__group">
+              <div class="header__time">Пятница, 10 декабря 16:27</div>
+
+              <div class="header__auth">
+                <a href="#">Личный кабинет</a>
+              </div>
+
+              <div class="header__language">
+                <a class="active" href="#">Ru</a>
+                /
+                <a href="#">En</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__bottom">
+
+            <div class="header__logo">
+              <a href="#">
+                <img src="./img/logo.png" alt="">
+              </a>
+            </div>
+
+            <nav class="header__main-nav main-nav">
+              <ul class="main-nav__list">
+
+                <template v-for="(item, index) in menuMain.arrItemMenu" :key="index">
+                  <li class="main-nav__item">
+                    <a :href="item.linkItem" v-on:mouseenter="openMenu(menuMain.nameMenu), openMainMenuLevelTwo(index)">
+                      {{ item.nameItem }}
+                    </a>
+                  </li>
+                </template>
+
+              </ul>
+            </nav>
+
+            <div class="header__nav-drop">
+
+            </div>
+
+          </div>
+        </div>
+
+        <template
+          v-if="showMainMenu === menuMain.nameMenu && menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo !== undefined">
+          <div class="header__main-menu-drop main-menu-drop">
+            <div class="container">
+              <div class="main-menu-drop__row">
+                <div class="main-menu-drop__column">
+                  <ul class="main-menu-drop__left-list">
+                    <template v-for="(el, i) in menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo"
+                      :key="i">
+                      <li v-on:mouseenter="openMainMenuLevelThree(i)" class="main-menu-drop__item">
+                        <a :href="el.linkItem" class="main-menu-drop__link">{{ el.nameItem }}</a>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+
+                <div class="main-menu-drop__column">
+                  <ul class="main-menu-drop__right-list">
+                    <template
+                      v-if="menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[menuMain.showMainMenuLevelThreeIndex].menuLeveThree !== undefined"
+                      v-for="(el, i) in menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[menuMain.showMainMenuLevelThreeIndex].menuLeveThree"
+                      :key="i">
+                      <li class="main-menu-drop__item">
+                        <a :href="el.linkItem" class="main-menu-drop__link">{{ el.nameItem }}</a>
+
+                        <div class="main-menu-drop__text">
+                          {{ el.textItem }}
+                        </div>
+                      </li>
+                    </template>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- <template>
+          <div class="header__menu-direction menu-direction">
+            <div class="container">
+              <div class="menu-direction__list">
+                <div class="menu-direction__item">
+                  <a href="#" class="menu-direction__name">Биржа
+                    для бизнеса</a>
+
+                  <div class="menu-direction__text">Управление денежными активами компаний</div>
+                </div>
+
+                <div class="menu-direction__item">
+                  <a href="#" class="menu-direction__name">Национальная товарная биржа</a>
+
+                  <div class="menu-direction__text">Организация биржевого товарного рынка в России</div>
+                </div>
+
+                <div class="menu-direction__item">
+                  <a href="#" class="menu-direction__name">Национальный клиринговый центр</a>
+
+                  <div class="menu-direction__text">Услуги центрального контрагента и клиринговой организации</div>
+                </div>
+
+                <div class="menu-direction__item">
+                  <a href="#" class="menu-direction__name">Национальный расчетный депозитарий</a>
+
+                  <div class="menu-direction__text">Услуги центрального депозитария, расчетного банка и торгового
+                    репозитария</div>
+                </div>
+
+                <div class="menu-direction__item">
+                  <a href="#" class="menu-direction__name">Финуслуги</a>
+
+                  <div class="menu-direction__text">Маркетплейс, созданный чтобы сделать банковские и страховые продукты
+                    доступными для населения</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </template> -->
+
+      </div>
+    </header>
