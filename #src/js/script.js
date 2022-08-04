@@ -996,7 +996,7 @@ const header = Vue.createApp({
 		// Методы работы меню бургера
 		openInfoMenu() {
 			this.menuMain.showMenu === true ? (this.menuMain.showMenu = false) : null;
-			this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
+			this.menuDirection.showMenu === true ? (this.menuDirection.showMenu = false) : null;
 
 			this.menuInfo.showMenu = !this.menuInfo.showMenu;
 		},
