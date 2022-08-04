@@ -17,7 +17,7 @@
 
         <div class="container">
           <div class="header__top">
-            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection(menuDirection.nameMenu)">
+            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection()">
               Направления
             </div>
 
@@ -57,8 +57,7 @@
 
                 <template v-for="(item, index) in menuMain.arrItemMenu" :key="index">
                   <li class="main-nav__item">
-                    <a :href="item.linkItem"
-                      v-on:mouseenter="openMainMenu(menuMain.nameMenu), openMainMenuLevelTwo(index)">
+                    <a :href="item.linkItem" v-on:mouseenter="openMainMenuLevelTwo(index)">
                       {{ item.nameItem }}
                     </a>
                   </li>
@@ -74,8 +73,7 @@
           </div>
         </div>
 
-        <template
-          v-if="showMainMenu === menuMain.nameMenu && menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo !== undefined">
+        <template v-if="menuMain.showMenu">
           <div class="header__main-menu-drop main-menu-drop">
             <div class="container">
               <div class="main-menu-drop__row">
@@ -112,7 +110,7 @@
           </div>
         </template>
 
-        <template v-if="showMainMenu === menuDirection.nameMenu">
+        <template v-if="menuDirection.showMenu">
           <div class="header__menu-direction menu-direction">
             <div class="container">
               <div class="menu-direction__list">

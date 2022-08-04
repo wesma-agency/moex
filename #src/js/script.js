@@ -1,10 +1,9 @@
 const header = Vue.createApp({
 	data() {
 		return {
-			showMainMenu: null,
-
 			menuMain: {
 				nameMenu: "menuMain",
+				showMenu: false,
 				showMainMenuLevelTwoIndex: 0,
 				showMainMenuLevelThreeIndex: 0,
 
@@ -267,6 +266,7 @@ const header = Vue.createApp({
 
 			menuDirection: {
 				nameMenu: "menuDirection",
+				showMenu: false,
 				arrItemMenu: [
 					{
 						nameItem: "Биржа для бизнеса",
@@ -303,31 +303,30 @@ const header = Vue.createApp({
 	},
 
 	methods: {
-		openMainMenu(name) {
-			this.showMainMenu = name;
-		},
-
-		closeMainMenu() {
-			if (this.showMainMenu === this.menuMain.nameMenu) {
-				this.showMainMenu = "";
-			}
-		},
-
 		openMainMenuLevelTwo(index) {
-			this.menuMain.showMainMenuLevelTwoIndex = index;
-			this.menuMain.showMainMenuLevelThreeIndex = 0;
+			if (this.menuMain.arrItemMenu[index].menuLevelTwo !== undefined) {
+				if (this.menuDirection.showMenu === true) {
+					this.menuDirection.showMenu = false;
+				}
+				this.menuMain.showMenu = true;
+				this.menuMain.showMainMenuLevelTwoIndex = index;
+				this.menuMain.showMainMenuLevelThreeIndex = 0;
+			}
 		},
 
 		openMainMenuLevelThree(index) {
 			this.menuMain.showMainMenuLevelThreeIndex = index;
 		},
 
-		openMenuDirection(name) {
-			if (this.showMainMenu === name) {
-				this.showMainMenu = "";
-			} else {
-				this.showMainMenu = name;
+		closeMainMenu() {
+			this.menuMain.showMenu = false;
+		},
+
+		openMenuDirection() {
+			if (this.menuMain.showMenu === true) {
+				this.menuMain.showMenu = false;
 			}
+			this.menuDirection.showMenu = !this.menuDirection.showMenu;
 		},
 	},
 });
