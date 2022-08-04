@@ -285,14 +285,6 @@ const header = Vue.createApp({
 			this.menuMain.showMainMenuLevelThreeIndex = index;
 		},
 
-		openMenuDirection(e) {
-			// if (this.showMenu === e.target.getAttribute("id")) {
-			// 	this.showMenu = null;
-			// } else {
-			// 	this.showMenu = e.target.getAttribute("id");
-			// }
-		},
-
 		openMainMenu(e) {
 			this.showMenu = e.target.getAttribute("id");
 		},
