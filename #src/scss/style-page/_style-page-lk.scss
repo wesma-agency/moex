@@ -244,6 +244,8 @@
 		}
 
 		&.--red {
+			color: #ff0508;
+			background: rgba(255, 5, 8, 0.1);
 		}
 
 		&:not(:last-child) {
