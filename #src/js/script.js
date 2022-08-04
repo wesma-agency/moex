@@ -1,6 +1,160 @@
+const compMainMenu = {
+	props: {
+		objmenu: Object,
+	},
+
+	emits: ["eventHoverItemMenu"],
+
+	data() {
+		return {};
+	},
+
+	template: `
+		<nav class="header__main-nav main-nav">
+			<ul class="main-nav__list">
+
+				<li class="main-nav__item" v-for="(item, index) in objmenu" :key="index">
+					<a :href="item.linkItem" v-on:mouseenter="$emit('eventHoverItemMenu', index)"
+						:class="{ '--hover': item.hover && menuMain.showMenu }">
+						{{ item.nameItem }}
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+	`,
+};
+
+const compMainMenuDrop = {
+	props: {
+		objmenu: Object,
+	},
+
+	data() {
+		return {
+			indexHover: 0,
+		};
+	},
+
+	created() {},
+
+	methods: {
+		hoverItemMenu(index) {
+			this.indexHover = index;
+		},
+	},
+
+	template: `
+		<div class="header__main-menu-drop main-menu-drop">
+			<div class="container">
+			<div class="main-menu-drop__row">
+				<div class="main-menu-drop__column">
+				<ul class="main-menu-drop__left-list">
+					<li class="main-menu-drop__item" v-for="(item, index) in objmenu.menuLevelTwo">
+						<a :href="item.linkItem" class="main-menu-drop__link" v-on:mouseenter="hoverItemMenu(index)">
+							{{item.nameItem }}
+						</a>
+					</li>
+				</ul>
+				</div>
+
+				<div class="main-menu-drop__column">
+				<ul class="main-menu-drop__right-list">
+					<li class="main-menu-drop__item" v-for="(item, index) in objmenu.menuLevelTwo[indexHover].menuLeveThree">
+						<a :href="item.linkItem" class="main-menu-drop__link">{{ item.nameItem }}</a>
+						<div class="main-menu-drop__text">
+							{{ item.textItem }}
+						</div>
+					</li>
+				</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	`,
+};
+
+const compMenuDirection = {
+	props: {
+		objmenu: Object,
+	},
+
+	data() {
+		return {};
+	},
+
+	template: `
+		<div class="header__menu-direction menu-direction">
+			<div class="container">
+			<div class="menu-direction__list">
+
+				<template v-for="(item, index) in objmenu.arrItemMenu" :key="index">
+				<div class="menu-direction__item">
+					<a :href="item.linkItem" class="menu-direction__name">{{ item.nameItem }}</a>
+
+					<div class="menu-direction__text">{{ item.textItem }}</div>
+				</div>
+				</template>
+
+			</div>
+			</div>
+		</div>
+	`,
+};
+
+const compMenuInfo = {
+	props: {
+		objmenu: Object,
+	},
+
+	data() {
+		return {
+			indexHover: 0,
+		};
+	},
+
+	methods: {
+		hoverItemMenu(index) {
+			this.indexHover = index;
+		},
+	},
+
+	template: `
+		<div class="header__menu-info menu-info">
+			<div class="container">
+			<div class="menu-info__row">
+				<div class="menu-info__column">
+					<ul class="menu-info__left-list">
+
+						<li v-for="(item, index) in objmenu.arrItemMenu" :key="index" class="menu-info__item">
+							<a :href="item.linkItem" class="menu-info__link" v-on:mouseenter="hoverItemMenu(index)">
+								{{item.nameItem }}
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="menu-info__column">
+					<ul class="menu-info__right-list">
+						<li v-for="(item, index) in objmenu.arrItemMenu[indexHover].menuLevelTwo" :key="index" class="menu-info__item">
+							<a :href="item.linkItem" class="menu-info__link">{{ item.nameItem }}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	`,
+};
+
 const header = Vue.createApp({
 	data() {
 		return {
+			currentTime: "",
+
+			isMobile: false,
+
 			menuMain: {
 				nameMenu: "menuMain",
 				showMenu: false,
@@ -952,41 +1106,45 @@ const header = Vue.createApp({
 	},
 
 	created() {
-		this.menuMain.showMainMenuLevelTwoIndex = 0;
-		this.menuMain.showMainMenuLevelThreeIndex = 0;
-
 		this.menuInfo.showMainMenuLevelTwoIndex = 0;
+
+		setInterval(this.currentDate, 1000);
+	},
+
+	computed: {
+		getCurrentDate() {
+			return this.currentTime;
+		},
 	},
 
 	methods: {
+		// Текущая дата в шапке
+		currentDate() {
+			let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+			let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+			let currentDate = new Date();
+
+			this.currentTime = `${days[currentDate.getDay()]}, ${currentDate.getDay()} ${month[currentDate.getMonth()]} ${currentDate.getHours()} : ${currentDate.getMinutes() < 10 ? "0" + currentDate.getMinutes() : currentDate.getMinutes()}`;
+		},
+
 		// Методы работы оснвоного меню
-		openMainMenuLevelTwo(index) {
-			if (this.menuMain.arrItemMenu[index].menuLevelTwo !== undefined) {
-				this.menuDirection.showMenu === true ? (this.menuDirection.showMenu = false) : null;
-				this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
-
-				this.menuMain.showMenu = true;
-				this.menuMain.showMainMenuLevelTwoIndex = index;
-				this.menuMain.showMainMenuLevelThreeIndex = 0;
-			}
-		},
-
-		openMainMenuLevelThree(index) {
-			if (this.menuMain.arrItemMenu[this.menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[index].menuLeveThree !== undefined) {
-				this.menuMain.showMainMenuLevelThreeIndex = index;
-			} else {
-				this.menuMain.showMainMenuLevelThreeIndex = null;
-			}
-		},
-
 		closeMainMenu() {
-			this.menuMain.showMenu = false;
+			this.menuMain.arrItemMenu.forEach((element) => (element.isShowDesctop = false));
+		},
+
+		hoverItemMenu(advice) {
+			this.menuDirection.showMenu === true ? (this.menuDirection.showMenu = false) : null;
+			this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
+
+			this.menuMain.arrItemMenu.forEach((element) => (element.isShowDesctop = false));
+			this.menuMain.arrItemMenu[advice].isShowDesctop = true;
 		},
 		//
 
 		// Метод работы  меню напрвлений
 		openMenuDirection() {
-			this.menuMain.showMenu === true ? (this.menuMain.showMenu = false) : null;
+			this.closeMainMenu();
 			this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
 
 			this.menuDirection.showMenu = !this.menuDirection.showMenu;
@@ -995,19 +1153,19 @@ const header = Vue.createApp({
 
 		// Методы работы меню бургера
 		openInfoMenu() {
-			this.menuMain.showMenu === true ? (this.menuMain.showMenu = false) : null;
+			this.closeMainMenu();
 			this.menuDirection.showMenu === true ? (this.menuDirection.showMenu = false) : null;
 
 			this.menuInfo.showMenu = !this.menuInfo.showMenu;
 		},
-
-		openInfoMenuLevelTwo(index) {
-			if (this.menuInfo.arrItemMenu[index].menuLevelTwo !== undefined) {
-				this.menuInfo.showMenu = true;
-				this.menuInfo.showMainMenuLevelTwoIndex = index;
-			}
-		},
 		//
+	},
+
+	components: {
+		"comp-main-menu": compMainMenu,
+		"comp-main-menu-drop": compMainMenuDrop,
+		"comp-menu-direction": compMenuDirection,
+		"comp-menu-info": compMenuInfo,
 	},
 });
 
