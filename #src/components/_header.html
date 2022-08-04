@@ -31,7 +31,7 @@
 
             <div class="header__group">
               <div class="header__time">
-                {{ getCurrentDate }}
+                <comp-current-date></comp-current-date>
               </div>
 
               <div class="header__auth">
@@ -54,157 +54,32 @@
               </a>
             </div>
 
-            <comp-main-menu :objmenu="menuMain.arrItemMenu" v-on:event-hover-item-menu="hoverItemMenu"></comp-main-menu>
+            <comp-main-menu :objmenu="headerMenu.menuMain.arrItemMenu" v-on:event-hover-item-menu="hoverItemMenu">
+            </comp-main-menu>
 
 
             <div class="header__nav-info" v-on:click="openInfoMenu">
-
             </div>
 
           </div>
         </div>
 
-        <template v-for="(item, index) in menuMain.arrItemMenu">
+        <template v-for="(item, index) in headerMenu.menuMain.arrItemMenu">
           <comp-main-menu-drop :objmenu="item" v-if="item.isShowDesctop"></comp-main-menu-drop>
         </template>
 
-        <template v-if="menuDirection.showMenu">
-          <comp-menu-direction :objmenu="menuDirection"></comp-menu-direction>
+        <template v-if="headerMenu.menuDirection.showMenu">
+          <comp-menu-direction :objmenu="headerMenu.menuDirection"></comp-menu-direction>
         </template>
 
-        <template v-if="menuInfo.showMenu">
-          <comp-menu-info :objmenu="menuInfo"></comp-menu-info>
+        <template v-if="headerMenu.menuInfo.showMenu">
+          <comp-menu-info :objmenu="headerMenu.menuInfo"></comp-menu-info>
         </template>
 
-        <template v-if="isMobile">
-          <div class="mobile-menu">
-
-            <div class="mobile-menu__wrap">
-
-              <div class="mobile-menu__top">
-                <div class="mobile-menu__top-group">
-                  <div class="mobile-menu__logo">
-                    <img src="./img/logo.png" alt="">
-                  </div>
-
-                  <div class="mobile-menu__close" v-on:click="isMobile = false"></div>
-                </div>
-
-                <div class="mobile-menu__time">
-                  {{ getCurrentDate }}
-                </div>
-
-                <div class="mobile-menu__search main-search">
-                  <button class="main-search__button" type="submit">
-
-                  </button>
-
-                  <input class="main-search__input" type="text" placeholder="Поиск">
-                </div>
-
-              </div>
-
-              <div class="mobile-menu__middle">
-
-                <div class="mobile-menu__main mobile-main-menu">
-                  <ul class="mobile-main-menu__list">
-                    <li class="mobile-main-menu__item" v-for="(item, index) in menuMain.arrItemMenu" :key="index">
-
-                      <div class="mobile-main-menu__sub-item-group">
-                        <a :href="item.linkItem">
-                          {{ item.nameItem }}
-                        </a>
-
-                        <span class="mobile-main-menu__icon-open-sub"
-                          v-on:click="item.isShowMobile = !item.isShowMobile"></span>
-                      </div>
-
-                      <ul class="mobile-main-menu__sub-list" v-if="item.isShowMobile">
-                        <li class="mobile-main-menu__sub-item" v-for="(itemTwo, indexTwo) in item.menuLevelTwo"
-                          :key="indexTwo">
-                          <div class="mobile-main-menu__sub-item-group">
-                            <a :href="itemTwo.linkItem">
-                              {{ itemTwo.nameItem }}
-                            </a>
-
-                            <span class="mobile-main-menu__icon-open-sub"
-                              v-on:click="itemTwo.isShowMobile = !itemTwo.isShowMobile"></span>
-                          </div>
-
-                          <ul class="mobile-main-menu__sub-list" v-if="itemTwo.isShowMobile">
-                            <li class="mobile-main-menu__sub-item"
-                              v-for="(itemThree, indexThree) in itemTwo.menuLeveThree" :key="indexThree">
-                              <a :href="itemThree.linkItem">
-                                {{ itemThree.nameItem }}
-                              </a>
-                            </li>
-                          </ul>
-
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="mobile-menu__direction mobile-direction-menu">
-
-                  <div class="mobile-direction-menu__group"
-                    v-on:click="menuDirection.isShowMobile = !menuDirection.isShowMobile">
-                    <div class="mobile-direction-menu__icon">Направления</div>
-
-                    <span class="mobile-direction-menu__icon-open-sub"></span>
-                  </div>
-
-                  <ul class="mobile-direction-menu__list" v-if="menuDirection.isShowMobile">
-                    <li v-for="(item, index) in menuDirection.arrItemMenu" :key="index"
-                      class="mobile-direction-menu__item">
-                      <a :href="item.linkItem" class="mobile-direction-menu__link">{{ item.nameItem }}</a>
-
-                      <div class="mobile-direction-menu__text">{{ item.textItem }}</div>
-                    </li>
-                  </ul>
-
-                </div>
-
-                <div class="mobile-menu__info mobile-info-menu">
-                  <div class="mobile-info-menu__group" v-on:click="menuInfo.isShowMobile = !menuInfo.isShowMobile">
-                    <div class="mobile-info-menu__icon">
-                      Информация</div>
-
-                    <span class="mobile-info-menu__icon-open-sub"></span>
-                  </div>
-
-                  <ul class="mobile-info-menu__list" v-if="menuInfo.isShowMobile">
-                    <li class="mobile-info-menu__item" v-for="(item, index) in menuInfo.arrItemMenu" :key="index">
-
-                      <div class="mobile-info-menu__sub-item-group">
-                        <a :href="item.linkItem">
-                          {{ item.nameItem }}
-                        </a>
-
-                        <span class="mobile-info-menu__icon-open-sub"
-                          v-on:click="item.isShowMobile = !item.isShowMobile"></span>
-                      </div>
-
-                      <ul class="mobile-info-menu__sub-list" v-if="item.isShowMobile">
-                        <li class="mobile-info-menu__sub-item" v-for="(itemTwo, indexTwo) in item.menuLevelTwo"
-                          :key="indexTwo">
-                          <a :href="itemTwo.linkItem">
-                            {{ itemTwo.nameItem }}
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="mobile-menu__overlay" v-on:click="isMobile = false"></div>
-
-          </div>
+        <template v-if="headerMenu.isShowMobileMenu">
+          <comp-mobile-menu v-on:event-open-sub-menu-mobile="openSubMenuMobile"
+            v-on:event-close-menu-mobile="closeMenuMobile" :objmenu="headerMenu">
+          </comp-mobile-menu>
         </template>
 
       </div>
