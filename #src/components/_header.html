@@ -17,7 +17,7 @@
 
         <div class="container">
           <div class="header__top">
-            <div class="header__direction" id="menu-direction" v-on:click="openMenuDirection()">
+            <div class="header__nav-direction" v-on:click="openMenuDirection()">
               Направления
             </div>
 
@@ -66,7 +66,7 @@
               </ul>
             </nav>
 
-            <div class="header__nav-drop">
+            <div class="header__nav-info" v-on:click="openInfoMenu">
 
             </div>
 
@@ -90,8 +90,7 @@
 
                 <div class="main-menu-drop__column">
                   <ul class="main-menu-drop__right-list">
-                    <template
-                      v-if="menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[menuMain.showMainMenuLevelThreeIndex].menuLeveThree !== undefined"
+                    <template v-if="menuMain.showMainMenuLevelThreeIndex !== null"
                       v-for="(el, i) in menuMain.arrItemMenu[menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[menuMain.showMainMenuLevelThreeIndex].menuLeveThree"
                       :key="i">
                       <li class="main-menu-drop__item">
@@ -123,6 +122,38 @@
                   </div>
                 </template>
 
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <template v-if="menuInfo.showMenu">
+          <div class="header__menu-info menu-info">
+            <div class="container">
+              <div class="menu-info__row">
+                <div class="menu-info__column">
+                  <ul class="menu-info__left-list">
+
+                    <template v-for="(el, i) in menuInfo.arrItemMenu">
+                      <li class="menu-info__item">
+                        <a :href="el.linkItem" class="menu-info__link" v-on:mouseenter="openInfoMenuLevelTwo(i)">{{
+                          el.nameItem }}</a>
+                      </li>
+                    </template>
+
+                  </ul>
+                </div>
+
+                <div class="menu-info__column">
+                  <ul class="menu-info__right-list">
+                    <template v-for="(el, i) in menuInfo.arrItemMenu[menuInfo.showMainMenuLevelTwoIndex].menuLevelTwo"
+                      :key="i">
+                      <li class="menu-info__item">
+                        <a :href="el.linkItem" class="menu-info__link">{{ el.nameItem }}</a>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

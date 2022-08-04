@@ -4,9 +4,6 @@ const header = Vue.createApp({
 			menuMain: {
 				nameMenu: "menuMain",
 				showMenu: false,
-				showMainMenuLevelTwoIndex: 0,
-				showMainMenuLevelThreeIndex: 0,
-
 				arrItemMenu: [
 					{
 						nameItem: "Продукты и услуги",
@@ -77,33 +74,45 @@ const header = Vue.createApp({
 								linkItem: "/link",
 								menuLeveThree: [
 									{
-										nameItem: "Депозитарное обслуживание",
+										nameItem: "Провести IPO",
 										linkItem: "/link",
-										textItem: "Сервисы по обслуживанию ценных бумаг: хранение, учет прав, проведение расчетов с участием финансовых институтов",
+										textItem: "для выпуска акций и их допуска к торгам",
 									},
 
 									{
-										nameItem: "Оценка платежеспособности",
+										nameItem: "Заказать мероприятие",
 										linkItem: "/link",
-										textItem: "Хеджирование рыночного риска и увеличение возможностей создания торговых стратегий на ожиданиях по длинной ставке",
+										textItem: "для повышения интереса к эмитенту",
 									},
 
 									{
-										nameItem: "Единый счет",
+										nameItem: "Провести листинг",
 										linkItem: "/link",
-										textItem: "Автоматизация переводов ценных бумаг и денежных средств между клиринговыми организациями НРД и НКЦ",
+										textItem: "для включения в список ценных бумаг, допущенных к торгам",
 									},
 
 									{
-										nameItem: "Технологические решения",
+										nameItem: "Выпустить биржевые облигации",
 										linkItem: "/link",
-										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+										textItem: "для листинга по упрощенным правилам",
 									},
 
 									{
-										nameItem: "Клиринговое членство",
+										nameItem: "Расчитать стоимость листинга",
 										linkItem: "/link",
-										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+										textItem: "для уточнения ориентировочной стоимости",
+									},
+
+									{
+										nameItem: "Поддержка и обслуживание",
+										linkItem: "/link",
+										textItem: "для мониторинга и контроля за соответсвием бумаг и организаций",
+									},
+
+									{
+										nameItem: "Иностранным эмитентам",
+										linkItem: "/link",
+										textItem: "для допуска иностранных ценных бумаг к торгам",
 									},
 								],
 							},
@@ -113,21 +122,33 @@ const header = Vue.createApp({
 								linkItem: "/link",
 								menuLeveThree: [
 									{
-										nameItem: "Депозитарное обслуживание",
+										nameItem: "Финуслуги",
 										linkItem: "/link",
-										textItem: "Сервисы по обслуживанию ценных бумаг: хранение, учет прав, проведение расчетов с участием финансовых институтов",
+										textItem: "для начинающих инвесторов, открытия вкладов, кредитов и страхования",
 									},
 
 									{
-										nameItem: "Оценка платежеспособности",
+										nameItem: " Биржевая информация",
 										linkItem: "/link",
-										textItem: "Хеджирование рыночного риска и увеличение возможностей создания торговых стратегий на ожиданиях по длинной ставке",
+										textItem: "для отслеживания хода и итогов торгов ",
 									},
 
 									{
-										nameItem: "Единый счет",
+										nameItem: "Брокеры",
 										linkItem: "/link",
-										textItem: "Автоматизация переводов ценных бумаг и денежных средств между клиринговыми организациями НРД и НКЦ",
+										textItem: "для инвестирования через наших партнеров",
+									},
+
+									{
+										nameItem: "Инвестиции ",
+										linkItem: "/link",
+										textItem: "для знакомтсва с инструментами",
+									},
+
+									{
+										nameItem: " Котировки",
+										linkItem: "/link",
+										textItem: "для понимания тенденций рынка",
 									},
 								],
 							},
@@ -137,33 +158,27 @@ const header = Vue.createApp({
 								linkItem: "/link",
 								menuLeveThree: [
 									{
+										nameItem: "Спонсируемый доступ",
+										linkItem: "/link",
+										textItem: "Доступ к подсистемам торгово-клиринговой системы Московской Биржи",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Сегрегированные счета",
+										linkItem: "/link",
+										textItem: "Позволит снизить  риски при работе на российском рынке",
+									},
+
+									{
 										nameItem: "Клиринговое членство",
 										linkItem: "/link",
 										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
-									},
-
-									{
-										nameItem: "Защита информации",
-										linkItem: "/link",
-										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
-									},
-
-									{
-										nameItem: "Единый пул обеспечения",
-										linkItem: "/link",
-										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
-									},
-
-									{
-										nameItem: "Фьючерсы на корзину ОФЗ",
-										linkItem: "/link",
-										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
-									},
-
-									{
-										nameItem: "Клиринговое обслуживание",
-										linkItem: "/link",
-										textItem: "Безналичные расчёты между странами, компаниями, предприятиями и банками",
 									},
 								],
 							},
@@ -233,6 +248,72 @@ const header = Vue.createApp({
 									},
 								],
 							},
+
+							{
+								nameItem: "Частным лицам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Финуслуги",
+										linkItem: "/link",
+										textItem: "для начинающих инвесторов, открытия вкладов, кредитов и страхования",
+									},
+
+									{
+										nameItem: " Биржевая информация",
+										linkItem: "/link",
+										textItem: "для отслеживания хода и итогов торгов ",
+									},
+
+									{
+										nameItem: "Брокеры",
+										linkItem: "/link",
+										textItem: "для инвестирования через наших партнеров",
+									},
+
+									{
+										nameItem: "Инвестиции ",
+										linkItem: "/link",
+										textItem: "для знакомтсва с инструментами",
+									},
+
+									{
+										nameItem: " Котировки",
+										linkItem: "/link",
+										textItem: "для понимания тенденций рынка",
+									},
+								],
+							},
+
+							{
+								nameItem: "Международным инвесторам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Спонсируемый доступ",
+										linkItem: "/link",
+										textItem: "Доступ к подсистемам торгово-клиринговой системы Московской Биржи",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Сегрегированные счета",
+										linkItem: "/link",
+										textItem: "Позволит снизить  риски при работе на российском рынке",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+								],
+							},
 						],
 					},
 
@@ -243,6 +324,109 @@ const header = Vue.createApp({
 							{
 								nameItem: "Участникам торгов",
 								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Депозитарное обслуживание",
+										linkItem: "/link",
+										textItem: "Сервисы по обслуживанию ценных бумаг: хранение, учет прав, проведение расчетов с участием финансовых институтов",
+									},
+
+									{
+										nameItem: "Оценка платежеспособности",
+										linkItem: "/link",
+										textItem: "Хеджирование рыночного риска и увеличение возможностей создания торговых стратегий на ожиданиях по длинной ставке",
+									},
+
+									{
+										nameItem: "Единый счет",
+										linkItem: "/link",
+										textItem: "Автоматизация переводов ценных бумаг и денежных средств между клиринговыми организациями НРД и НКЦ",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+
+									{
+										nameItem: "Защита информации",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Единый пул обеспечения",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Фьючерсы на корзину ОФЗ",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Клиринговое обслуживание",
+										linkItem: "/link",
+										textItem: "Безналичные расчёты между странами, компаниями, предприятиями и банками",
+									},
+								],
+							},
+
+							{
+								nameItem: "Эмитентам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Провести IPO",
+										linkItem: "/link",
+										textItem: "для выпуска акций и их допуска к торгам",
+									},
+
+									{
+										nameItem: "Заказать мероприятие",
+										linkItem: "/link",
+										textItem: "для повышения интереса к эмитенту",
+									},
+
+									{
+										nameItem: "Провести листинг",
+										linkItem: "/link",
+										textItem: "для включения в список ценных бумаг, допущенных к торгам",
+									},
+
+									{
+										nameItem: "Выпустить биржевые облигации",
+										linkItem: "/link",
+										textItem: "для листинга по упрощенным правилам",
+									},
+
+									{
+										nameItem: "Расчитать стоимость листинга",
+										linkItem: "/link",
+										textItem: "для уточнения ориентировочной стоимости",
+									},
+
+									{
+										nameItem: "Поддержка и обслуживание",
+										linkItem: "/link",
+										textItem: "для мониторинга и контроля за соответсвием бумаг и организаций",
+									},
+
+									{
+										nameItem: "Иностранным эмитентам",
+										linkItem: "/link",
+										textItem: "для допуска иностранных ценных бумаг к торгам",
+									},
+								],
 							},
 						],
 					},
@@ -250,16 +434,349 @@ const header = Vue.createApp({
 					{
 						nameItem: "Обучение",
 						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Международным инвесторам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Спонсируемый доступ",
+										linkItem: "/link",
+										textItem: "Доступ к подсистемам торгово-клиринговой системы Московской Биржи",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Сегрегированные счета",
+										linkItem: "/link",
+										textItem: "Позволит снизить  риски при работе на российском рынке",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+								],
+							},
+						],
 					},
 
 					{
 						nameItem: "Медиа",
 						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Участникам торгов",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Депозитарное обслуживание",
+										linkItem: "/link",
+										textItem: "Сервисы по обслуживанию ценных бумаг: хранение, учет прав, проведение расчетов с участием финансовых институтов",
+									},
+
+									{
+										nameItem: "Оценка платежеспособности",
+										linkItem: "/link",
+										textItem: "Хеджирование рыночного риска и увеличение возможностей создания торговых стратегий на ожиданиях по длинной ставке",
+									},
+
+									{
+										nameItem: "Единый счет",
+										linkItem: "/link",
+										textItem: "Автоматизация переводов ценных бумаг и денежных средств между клиринговыми организациями НРД и НКЦ",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+
+									{
+										nameItem: "Защита информации",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Единый пул обеспечения",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Фьючерсы на корзину ОФЗ",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Клиринговое обслуживание",
+										linkItem: "/link",
+										textItem: "Безналичные расчёты между странами, компаниями, предприятиями и банками",
+									},
+								],
+							},
+
+							{
+								nameItem: "Эмитентам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Провести IPO",
+										linkItem: "/link",
+										textItem: "для выпуска акций и их допуска к торгам",
+									},
+
+									{
+										nameItem: "Заказать мероприятие",
+										linkItem: "/link",
+										textItem: "для повышения интереса к эмитенту",
+									},
+
+									{
+										nameItem: "Провести листинг",
+										linkItem: "/link",
+										textItem: "для включения в список ценных бумаг, допущенных к торгам",
+									},
+
+									{
+										nameItem: "Выпустить биржевые облигации",
+										linkItem: "/link",
+										textItem: "для листинга по упрощенным правилам",
+									},
+
+									{
+										nameItem: "Расчитать стоимость листинга",
+										linkItem: "/link",
+										textItem: "для уточнения ориентировочной стоимости",
+									},
+
+									{
+										nameItem: "Поддержка и обслуживание",
+										linkItem: "/link",
+										textItem: "для мониторинга и контроля за соответсвием бумаг и организаций",
+									},
+
+									{
+										nameItem: "Иностранным эмитентам",
+										linkItem: "/link",
+										textItem: "для допуска иностранных ценных бумаг к торгам",
+									},
+								],
+							},
+
+							{
+								nameItem: "Частным лицам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Финуслуги",
+										linkItem: "/link",
+										textItem: "для начинающих инвесторов, открытия вкладов, кредитов и страхования",
+									},
+
+									{
+										nameItem: " Биржевая информация",
+										linkItem: "/link",
+										textItem: "для отслеживания хода и итогов торгов ",
+									},
+
+									{
+										nameItem: "Брокеры",
+										linkItem: "/link",
+										textItem: "для инвестирования через наших партнеров",
+									},
+
+									{
+										nameItem: "Инвестиции ",
+										linkItem: "/link",
+										textItem: "для знакомтсва с инструментами",
+									},
+
+									{
+										nameItem: " Котировки",
+										linkItem: "/link",
+										textItem: "для понимания тенденций рынка",
+									},
+								],
+							},
+
+							{
+								nameItem: "Международным инвесторам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Спонсируемый доступ",
+										linkItem: "/link",
+										textItem: "Доступ к подсистемам торгово-клиринговой системы Московской Биржи",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Сегрегированные счета",
+										linkItem: "/link",
+										textItem: "Позволит снизить  риски при работе на российском рынке",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+								],
+							},
+						],
 					},
 
 					{
 						nameItem: "О компании",
 						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Участникам торгов",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Депозитарное обслуживание",
+										linkItem: "/link",
+										textItem: "Сервисы по обслуживанию ценных бумаг: хранение, учет прав, проведение расчетов с участием финансовых институтов",
+									},
+
+									{
+										nameItem: "Оценка платежеспособности",
+										linkItem: "/link",
+										textItem: "Хеджирование рыночного риска и увеличение возможностей создания торговых стратегий на ожиданиях по длинной ставке",
+									},
+
+									{
+										nameItem: "Единый счет",
+										linkItem: "/link",
+										textItem: "Автоматизация переводов ценных бумаг и денежных средств между клиринговыми организациями НРД и НКЦ",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+
+									{
+										nameItem: "Защита информации",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Единый пул обеспечения",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Фьючерсы на корзину ОФЗ",
+										linkItem: "/link",
+										textItem: "Снижение издержек участников на проведение операций на рынках Группы Московская Биржа",
+									},
+
+									{
+										nameItem: "Клиринговое обслуживание",
+										linkItem: "/link",
+										textItem: "Безналичные расчёты между странами, компаниями, предприятиями и банками",
+									},
+								],
+							},
+
+							{
+								nameItem: "Частным лицам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Финуслуги",
+										linkItem: "/link",
+										textItem: "для начинающих инвесторов, открытия вкладов, кредитов и страхования",
+									},
+
+									{
+										nameItem: " Биржевая информация",
+										linkItem: "/link",
+										textItem: "для отслеживания хода и итогов торгов ",
+									},
+
+									{
+										nameItem: "Брокеры",
+										linkItem: "/link",
+										textItem: "для инвестирования через наших партнеров",
+									},
+
+									{
+										nameItem: "Инвестиции ",
+										linkItem: "/link",
+										textItem: "для знакомтсва с инструментами",
+									},
+
+									{
+										nameItem: " Котировки",
+										linkItem: "/link",
+										textItem: "для понимания тенденций рынка",
+									},
+								],
+							},
+
+							{
+								nameItem: "Международным инвесторам",
+								linkItem: "/link",
+								menuLeveThree: [
+									{
+										nameItem: "Спонсируемый доступ",
+										linkItem: "/link",
+										textItem: "Доступ к подсистемам торгово-клиринговой системы Московской Биржи",
+									},
+
+									{
+										nameItem: "Технологические решения",
+										linkItem: "/link",
+										textItem: "Профессиональных решений для доступа к рынкам биржи и электронной торговли",
+									},
+
+									{
+										nameItem: "Сегрегированные счета",
+										linkItem: "/link",
+										textItem: "Позволит снизить  риски при работе на российском рынке",
+									},
+
+									{
+										nameItem: "Клиринговое членство",
+										linkItem: "/link",
+										textItem: "Участники торгов и участники клиринга теперь могут быть отдельные юридические лица",
+									},
+								],
+							},
+						],
 					},
 				],
 			},
@@ -299,15 +816,155 @@ const header = Vue.createApp({
 					},
 				],
 			},
+
+			menuInfo: {
+				nameMenu: "menuInfo",
+				showMenu: false,
+				arrItemMenu: [
+					{
+						nameItem: "Рынки",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Фондовый",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Срочный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Валютный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Денежный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок стандартизированных ПФИ ",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+
+					{
+						nameItem: "Индексы",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Валютный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Денежный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок стандартизированных ПФИ ",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+
+					{
+						nameItem: "Биржевая информация",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Валютный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+
+					{
+						nameItem: "Листинг",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Денежный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок стандартизированных ПФИ ",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+
+					{
+						nameItem: "Управление рисками",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Денежный",
+								linkItem: "/link",
+							},
+
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+
+					{
+						nameItem: "Технологические решения",
+						linkItem: "/link",
+						menuLevelTwo: [
+							{
+								nameItem: "Рынок инноваций и инвестиций",
+								linkItem: "/link",
+							},
+						],
+					},
+				],
+			},
 		};
 	},
 
+	created() {
+		this.menuMain.showMainMenuLevelTwoIndex = 0;
+		this.menuMain.showMainMenuLevelThreeIndex = 0;
+
+		this.menuInfo.showMainMenuLevelTwoIndex = 0;
+	},
+
 	methods: {
+		// Методы работы оснвоного меню
 		openMainMenuLevelTwo(index) {
 			if (this.menuMain.arrItemMenu[index].menuLevelTwo !== undefined) {
-				if (this.menuDirection.showMenu === true) {
-					this.menuDirection.showMenu = false;
-				}
+				this.menuDirection.showMenu === true ? (this.menuDirection.showMenu = false) : null;
+				this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
+
 				this.menuMain.showMenu = true;
 				this.menuMain.showMainMenuLevelTwoIndex = index;
 				this.menuMain.showMainMenuLevelThreeIndex = 0;
@@ -315,19 +972,42 @@ const header = Vue.createApp({
 		},
 
 		openMainMenuLevelThree(index) {
-			this.menuMain.showMainMenuLevelThreeIndex = index;
+			if (this.menuMain.arrItemMenu[this.menuMain.showMainMenuLevelTwoIndex].menuLevelTwo[index].menuLeveThree !== undefined) {
+				this.menuMain.showMainMenuLevelThreeIndex = index;
+			} else {
+				this.menuMain.showMainMenuLevelThreeIndex = null;
+			}
 		},
 
 		closeMainMenu() {
 			this.menuMain.showMenu = false;
 		},
+		//
 
+		// Метод работы  меню напрвлений
 		openMenuDirection() {
-			if (this.menuMain.showMenu === true) {
-				this.menuMain.showMenu = false;
-			}
+			this.menuMain.showMenu === true ? (this.menuMain.showMenu = false) : null;
+			this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
+
 			this.menuDirection.showMenu = !this.menuDirection.showMenu;
 		},
+		//
+
+		// Методы работы меню бургера
+		openInfoMenu() {
+			this.menuMain.showMenu === true ? (this.menuMain.showMenu = false) : null;
+			this.menuInfo.showMenu === true ? (this.menuInfo.showMenu = false) : null;
+
+			this.menuInfo.showMenu = !this.menuInfo.showMenu;
+		},
+
+		openInfoMenuLevelTwo(index) {
+			if (this.menuInfo.arrItemMenu[index].menuLevelTwo !== undefined) {
+				this.menuInfo.showMenu = true;
+				this.menuInfo.showMainMenuLevelTwoIndex = index;
+			}
+		},
+		//
 	},
 });
 
