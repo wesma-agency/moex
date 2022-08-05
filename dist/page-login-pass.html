@@ -13,7 +13,7 @@
   <div class="wrapper" id="app">
 
     <header class="header">
-      <div class="header__wrapper" v-on:mouseleave="closeMainMenu">
+      <div class="header__wrapper" v-if="isLoading" v-on:mouseleave="closeMainMenu">
 
         <div class="container">
           <div class="header__top">
