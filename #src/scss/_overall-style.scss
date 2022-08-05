@@ -35,13 +35,20 @@ body.lock {
 	flex-grow: 1;
 }
 
+@media (max-width: 1170px) {
+	.main {
+		margin-top: 53px;
+	}
+}
+
 .container {
 	max-width: 1550px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
-.title-h1 {
+.title-h1,
+h1 {
 	font-weight: 700;
 	font-size: 64px;
 	line-height: 120%;
@@ -50,11 +57,24 @@ body.lock {
 	color: var(--main-text-color);
 }
 
-.title-h2 {
+.title-h2,
+h2 {
 	font-weight: 700;
 	font-size: 40px;
 	line-height: 120%;
 	text-transform: uppercase;
 	font-feature-settings: "ss04" on;
 	color: #18191b;
+}
+
+@media (max-width: 1170px) {
+	.title-h1,
+	h1 {
+		font-size: 30px;
+	}
+
+	.title-h2,
+	h2 {
+		font-size: 24px;
+	}
 }

@@ -17,11 +17,11 @@
 
         <div class="container">
           <div class="header__top">
-            <div class="header__nav-direction" v-on:click="openMenuDirection">
+            <div class="header__nav-direction" v-on:click="openMenuDirection" v-if="!isMobile">
               Направления
             </div>
 
-            <div class="header__search main-search">
+            <div class="header__search main-search" v-if="!isMobile">
               <button class="main-search__button" type="submit">
 
               </button>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="header__group">
-              <div class="header__time">
+              <div class="header__time" v-if="!isMobile">
                 <comp-current-date></comp-current-date>
               </div>
 
@@ -44,9 +44,12 @@
                 <a href="#">En</a>
               </div>
             </div>
+
+            <div class="header__burger" v-if="isMobile"
+              v-on:click="headerMenu.isShowMobileMenu = !headerMenu.isShowMobileMenu"></div>
           </div>
 
-          <div class="header__bottom">
+          <div class="header__bottom" v-if="!isMobile">
 
             <div class="header__logo">
               <a href="#">

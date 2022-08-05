@@ -6,6 +6,7 @@ const compCurrentDate = {
 	},
 
 	created() {
+		this.currentDate();
 		setInterval(this.currentDate, 1000);
 	},
 
@@ -330,7 +331,7 @@ const compMobileMenu = {
 const header = Vue.createApp({
 	data() {
 		return {
-			isMobile: true,
+			isMobile: false,
 
 			headerMenu: {
 				isShowMobileMenu: false,
@@ -1286,7 +1287,21 @@ const header = Vue.createApp({
 		};
 	},
 
+	created() {
+		this.updateWidth();
+		window.addEventListener("resize", this.updateWidth);
+	},
+
 	methods: {
+		// отслеивание ширины экрана
+		updateWidth() {
+			if (window.innerWidth <= 1170) {
+				this.isMobile = true;
+			} else {
+				this.isMobile = false;
+			}
+		},
+
 		// Методы работы оснвоного меню
 		closeMainMenu() {
 			this.headerMenu.menuMain.arrItemMenu.forEach((element) => (element.isShowDesctop = false));

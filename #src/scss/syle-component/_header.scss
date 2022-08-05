@@ -102,6 +102,23 @@
 			background: url("../img/icon-burger.svg") no-repeat center / contain;
 		}
 	}
+
+	&__burger {
+		cursor: pointer;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50%);
+			left: 0;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url("../img/icon-burger.svg") no-repeat center / contain;
+		}
+	}
 }
 
 .main-nav {
@@ -320,11 +337,15 @@
 			display: none;
 		}
 
+		&__time {
+			display: none;
+		}
+
 		&__search {
 			display: none;
 		}
 
-		&__time {
+		&__nav-direction {
 			display: none;
 		}
 	}
