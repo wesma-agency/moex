@@ -17,7 +17,8 @@
 
         <div class="container">
           <div class="header__top">
-            <div class="header__nav-direction" v-on:click="openMenuDirection" v-if="!isMobile">
+            <div class="header__nav-direction" :class="{ '--show': headerMenu.menuDirection.showMenu }"
+              v-on:click="openMenuDirection" v-if="!isMobile">
               Направления
             </div>
 
@@ -61,7 +62,7 @@
             </comp-main-menu>
 
 
-            <div class="header__nav-info" v-on:click="openInfoMenu">
+            <div class="header__nav-info" :class="{ '--show': headerMenu.menuInfo.showMenu }" v-on:click="openInfoMenu">
             </div>
 
           </div>

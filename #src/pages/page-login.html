@@ -1,0 +1,58 @@
+@@include("../components/_header.html")
+
+<main class="main">
+
+  <section class="login">
+    <div class="login__wrap">
+      <div class="container">
+
+        <form class="login__form from-login">
+
+          <div class="from-login__wrap">
+            <div class="from-login__title title-h2">Вход в личный<br> кабинет</div>
+
+            <div class="from-login__warp-input warp-input">
+
+              <div class="warp-input__input">
+                <input type="text" v-on:focusin="inputFocusIn" v-on:focusout="inputFocusOut" data-ref="inputName1">
+
+                <span class="warp-input__name" ref="inputName1">Телефон или почта</span>
+              </div>
+
+              <div class="warp-input__err">Забыли адрес электронной почты или телефон?</div>
+            </div>
+
+            <div class="from-login__gos gos-reg">
+              <div class="gos-reg__icon">
+                <img src="./img/icon-gos.png" alt="">
+              </div>
+
+              <div class="gos-reg__text">Зарегистрироваться с помощью Госуслуг</div>
+            </div>
+
+            <div class="from-login__social social-reg">
+              <div class="social-reg__text">Или через:</div>
+
+              <div class="social-reg__list">
+                <div class="social-reg__item">
+                  <img src="./img/icon-google.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="from-login__group-button">
+            <a href="#" class="from-login__button main-btn --gray">Создать аккаунт</a>
+
+            <a href="#" class="from-login__button main-btn">Далее</a>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("../components/_footer.html")

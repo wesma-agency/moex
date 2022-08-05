@@ -31,7 +31,7 @@ body.lock {
 }
 
 .main {
-	margin-top: 131px;
+	margin-top: 141px;
 	flex-grow: 1;
 }
 
@@ -76,5 +76,33 @@ h2 {
 	.title-h2,
 	h2 {
 		font-size: 24px;
+	}
+}
+
+.main-btn {
+	padding: 20px;
+	width: 100%;
+	max-width: 225px;
+	background: #ff0508;
+	border-radius: 12px;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	transition: all 0.3s ease;
+	&.--gray {
+		background: #f4f5f8;
+		color: #18191b;
+	}
+	&:hover {
+		background: #18191b;
+		color: #fff;
+	}
+}
+
+@media (max-width: 1170px) {
+	.main-btn {
+		padding: 10px;
+		font-size: 16px;
+		max-width: 180px;
 	}
 }

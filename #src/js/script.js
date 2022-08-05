@@ -52,7 +52,7 @@ const compMainMenu = {
 
 				<li class="main-nav__item" v-for="(item, index) in objmenu" :key="index">
 					<a :href="item.linkItem" v-on:mouseenter="$emit('eventHoverItemMenu', index)"
-						:class="{ '--hover': item.hover && headerMenu.menuMain.showMenu }">
+						:class="{ '--hover': item.isShowDesctop }">
 						{{ item.nameItem }}
 					</a>
 				</li>
@@ -88,7 +88,7 @@ const compMainMenuDrop = {
 				<div class="main-menu-drop__column">
 				<ul class="main-menu-drop__left-list">
 					<li class="main-menu-drop__item" v-for="(item, index) in objmenu.menuLevelTwo">
-						<a :href="item.linkItem" class="main-menu-drop__link" v-on:mouseenter="hoverItemMenu(index)">
+						<a :href="item.linkItem" class="main-menu-drop__link" :class="{ '--hover': indexHover === index }" v-on:mouseenter="hoverItemMenu(index)">
 							{{item.nameItem }}
 						</a>
 					</li>
@@ -164,7 +164,7 @@ const compMenuInfo = {
 					<ul class="menu-info__left-list">
 
 						<li v-for="(item, index) in objmenu.arrItemMenu" :key="index" class="menu-info__item">
-							<a :href="item.linkItem" class="menu-info__link" v-on:mouseenter="hoverItemMenu(index)">
+							<a :href="item.linkItem" class="menu-info__link" :class="{ '--hover': indexHover === index }" v-on:mouseenter="hoverItemMenu(index)">
 								{{item.nameItem }}
 							</a>
 						</li>

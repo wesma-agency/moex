@@ -1,0 +1,188 @@
+.login {
+	&__wrap {
+		padding: 120px 0 0 0;
+	}
+
+	&__form {
+	}
+
+	&__button {
+	}
+}
+
+.from-login {
+	&__wrap {
+		max-width: 485px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__warp-input {
+		margin-bottom: 32px;
+	}
+
+	&__gos {
+	}
+
+	&__social {
+	}
+
+	&__corret-data {
+		margin-bottom: 32px;
+	}
+
+	&__group-button {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1000px;
+		margin: 0 auto;
+		margin-top: 200px;
+		&.--center {
+			justify-content: center;
+		}
+	}
+}
+
+.warp-input {
+	&__input {
+		position: relative;
+		& input {
+			padding-right: 30px;
+			padding-bottom: 5px;
+			width: 100%;
+			border-bottom: 2px solid #e0e2e9;
+			font-size: 20px;
+			line-height: 120%;
+			font-feature-settings: "ss04" on;
+			color: #18191b;
+			transition: all 0.3s ease;
+			&:focus {
+				border-color: #18191b;
+			}
+		}
+	}
+
+	&__name {
+		pointer-events: none;
+		position: absolute;
+		top: calc(50% - 10px);
+		left: 0;
+		transform: translate(0, -50%);
+		font-size: 20px;
+		line-height: 120%;
+		color: #18191b;
+		opacity: 0.3;
+		transition: all 0.3s ease;
+		&.focus {
+			top: -10px;
+			font-size: 14px;
+		}
+	}
+
+	&__icon-pass {
+		cursor: pointer;
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: calc(50% - 10px);
+		right: 0;
+		transform: translate(0, -50%);
+		background: url("../img/icon-show-pass.svg") no-repeat center / contain;
+	}
+
+	&__err {
+		margin-top: 24px;
+		font-size: 16px;
+		line-height: 120%;
+		font-feature-settings: "ss04" on;
+		color: #ff0508;
+	}
+}
+
+.gos-reg {
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	margin-bottom: 24px;
+	background: #f4f5f8;
+	border-radius: 12px;
+	&__icon {
+		margin-right: 20px;
+	}
+
+	&__text {
+	}
+}
+
+.social-reg {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__text {
+		margin-right: 20px;
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
+
+.corret-data {
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	background: #f4f5f8;
+	border-radius: 12px;
+	&__icon {
+		margin-right: 20px;
+	}
+
+	&__group {
+	}
+
+	&__text {
+		font-weight: bold;
+	}
+}
+
+@media (max-width: 1170px) {
+	.login {
+		&__wrap {
+			padding: 60px 0;
+		}
+	}
+
+	.from-login {
+		&__group-button {
+			margin-top: 100px;
+		}
+	}
+
+	.warp-input {
+		& input {
+			font-size: 16px;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.from-login {
+		&__group-button {
+			margin-top: 50px;
+			flex-direction: column;
+		}
+
+		&__button {
+			max-width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}

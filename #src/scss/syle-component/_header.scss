@@ -28,6 +28,11 @@
 			height: 24px;
 			background: url("../img/icon-direction.svg") no-repeat center / contain;
 		}
+		&.--show {
+			&::before {
+				background: url("../img/icon-close.svg") no-repeat center / contain;
+			}
+		}
 	}
 
 	&__search {
@@ -100,6 +105,11 @@
 			width: 24px;
 			height: 24px;
 			background: url("../img/icon-burger.svg") no-repeat center / contain;
+		}
+		&.--show {
+			&::before {
+				background: url("../img/icon-close.svg") no-repeat center / contain;
+			}
 		}
 	}
 
@@ -207,6 +217,7 @@
 		font-size: 24px;
 		line-height: 120%;
 		font-feature-settings: "ss04" on;
+		transition: all 0.3s ease;
 		&.--hover {
 			color: var(--text-color-red);
 		}
@@ -216,6 +227,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 32px;
+
+		& .main-menu-drop {
+			&__link {
+				&:hover {
+					color: var(--text-color-red);
+				}
+			}
+		}
 	}
 
 	&__text {
@@ -255,6 +274,9 @@
 		font-size: 24px;
 		line-height: 120%;
 		font-feature-settings: "ss04" on;
+		&:hover {
+			color: var(--text-color-red);
+		}
 	}
 
 	&__text {
@@ -298,6 +320,10 @@
 
 	&__link {
 		display: block;
+		transition: all 0.3s ease;
+		&.--hover {
+			color: var(--text-color-red);
+		}
 	}
 
 	&__right-list {
@@ -311,6 +337,9 @@
 			&__link {
 				font-size: 20px;
 				line-height: 120%;
+				&:hover {
+					color: var(--text-color-red);
+				}
 			}
 		}
 	}
