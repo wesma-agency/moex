@@ -13,7 +13,7 @@
 
   <section class="rates">
 
-    <template v-for="(item, index) in rates" :key="index">
+    <template v-if="isLoading" v-for="(item, index) in rates" :key="index">
       <comp-block-rates :objrate="item"></comp-block-rates>
     </template>
 
