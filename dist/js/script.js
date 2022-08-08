@@ -338,7 +338,7 @@ const header = Vue.createApp({
 	},
 
 	async created() {
-		await fetch("https://wesma-agency.github.io/moex/js/dataJson/headerMenu.json", {
+		await fetch("http://test-dev.altovovu.beget.tech/tender-task/dataJson/headerMenu.json", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json; charset=UTF-8",

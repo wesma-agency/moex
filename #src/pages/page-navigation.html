@@ -1,0 +1,49 @@
+@@include("../components/_header.html")
+
+<main class="main">
+    <section class="page-navigation">
+        <div class="container">
+            <div class="page-navigation__tilte title-h2">Страницы</div>
+
+            <div class="page-navigation__lsit">
+                <div class="page-navigation__item">
+                    <a href="./page-lk.html">Страница личного кабинета</a>
+                </div>
+
+                <div class="page-navigation__item">
+                    <a href="./page-login.html">Вход ввод логина</a>
+                </div>
+
+                <div class="page-navigation__item">
+                    <a href="./page-login-pass.html">Вход ввод пароля</a>
+                </div>
+
+                <div class="page-navigation__item">
+                    <a href="./page-login-reg.html">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .page-navigation {
+            padding: 80px 0;
+        }
+
+        .page-navigation__tilte {
+            margin-bottom: 40px;
+        }
+
+        .page-navigation__lsit {}
+
+        .page-navigation__item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .page-navigation__item a {
+            font-size: 20px;
+        }
+    </style>
+</main>
+
+@@include("../components/_footer.html")

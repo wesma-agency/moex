@@ -242,7 +242,7 @@ const rates = Vue.createApp({
 	},
 
 	async created() {
-		await fetch("https://wesma-agency.github.io/moex/js/dataJson/rates.json", {
+		await fetch("http://test-dev.altovovu.beget.tech/tender-task/dataJson/rates.json", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json; charset=UTF-8",
